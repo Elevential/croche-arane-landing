@@ -111,8 +111,10 @@
           <p>Insira seu e-mail para receber uma notificação no lançamento:</p>
           <form id="notify_form">
             <input type="email" id="email_input" placeholder="Seu e-mail" required>
-            <button type="submit" id="submit_btn">Enviar</button>
+            <button type="submit" id="submit_btn_newsletter">Enviar</button>
           </form>
+
+          <div id="status_message_newsletter" style="display: none;"></div>
         </div>
       </div>
 
@@ -128,7 +130,7 @@
         <div id="crochets">
           <div class="crochet">
             <div class="crochet-image-wrapper">
-              <img id="make" src="src/assets/crochet_make.PNG" alt="Ilustração de uma mulher com casaco rosa, tecendo um pano verde de crochê">
+              <img id="make" src="src/assets/crochet_make.png" alt="Ilustração de uma mulher com casaco rosa, tecendo um pano verde de crochê">
             </div>
             <div class="crochet-text">
               <h3 class='crochet-title'>
@@ -142,7 +144,7 @@
 
           <div class="crochet">
             <div class="crochet-image-wrapper">
-              <img src="src/assets/crochet_amostra.PNG" alt="Um pano em uma agulha sendo tecido">
+              <img src="src/assets/crochet_amostra.png" alt="Um pano em uma agulha sendo tecido">
             </div>
             <div class="crochet-text">
               <h3 class='crochet-title'>
@@ -170,7 +172,7 @@
 
           <div class="crochet">
             <div class="crochet-image-wrapper">
-              <img src="src/assets/crochet_partage.PNG" alt="3 mulheres sentadas em uma mesa cheia de linhas, agulhas tecendo.">
+              <img src="src/assets/crochet_partage.png" alt="3 mulheres sentadas em uma mesa cheia de linhas, agulhas tecendo.">
             </div>
             <div class="crochet-text">
               <h3 class='crochet-title'>
@@ -220,8 +222,7 @@
             <button type="submit">Enviar</button>
           </form>
 
-          <p id="status_message"></p>
-
+          <div id="status_message"></div>
         </div>
       </section>
 
@@ -261,5 +262,7 @@
 
     <script src='src/javascript/script.js'></script>
     <script src='src/javascript/faq.js'></script>
+    <script src='src/javascript/contato.js'></script>
+    <script src='src/javascript/newsletter.js'></script>
   </body>
 </html>

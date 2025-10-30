@@ -2,17 +2,20 @@ $(document).ready(function() {
     $('#learn_more_btn').on('click', function(e) {
         e.preventDefault();
         $('#email_modal').fadeIn(200); // efeito suave
+        document.getElementById("email_modal").style.display = "flex";
     });
 
     // Fechar modal clicando no X
     $('.close').on('click', function() {
         $('#email_modal').fadeOut(200);
+        document.getElementById("email_modal").style.display = "none";
     });
 
     // Fechar modal clicando fora do conteúdo
     $(window).on('click', function(e) {
         if ($(e.target).is('#email_modal')) {
             $('#email_modal').fadeOut(200);
+            document.getElementById("email_modal").style.display = "none";
         }
     });
 

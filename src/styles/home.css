@@ -147,6 +147,13 @@
     margin: 100px 60px 100px 60px;
 }
 
+#status_message_newsletter {
+    display: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 @media (min-width: 1200px) and (max-width: 1400px) {
     #launch_date {
         gap: 6px;

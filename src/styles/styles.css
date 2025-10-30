@@ -6,6 +6,7 @@
 @import url('answers.css');
 @import url('contact.css');
 @import url('modal.css');
+@import url('form.css');
 
 * {
     font-family: "Lexend Deca", sans-serif;
