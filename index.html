@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/styles/styles.css">
-    <link rel="stylesheet" href="src/styles/header.css">
-    <link rel="stylesheet" href="src/styles/home.css">
-    <link rel="stylesheet" href="src/styles/features.css">
-    <link rel="stylesheet" href="src/styles/answers.css">
-    <link rel="stylesheet" href="src/styles/contact.css">
-    <link rel="stylesheet" href="src/styles/modal.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Arane</title>
@@ -90,7 +84,7 @@
               Feito para quem vive o crochê com paixão — um espaço para criar, ensinar, aprender e compartilhar.
             </p>
           </div>
-          <div id="cta_buttons">
+          <!-- <div id="cta_buttons">
             <a href="#">
               <img src="src/assets/googleplay.PNG" alt="Botão para baixar app na AppleStore">
             </a>
@@ -98,6 +92,7 @@
               <img src="src/assets/applestore.PNG" alt="Botão para baixar app na AppleStore">
             </a>
           </div>
+        -->
           <div id="launch_date">
             <span class="launch_text">Lançamento previsto para 2026</span>
             <button id="learn_more_btn">
@@ -192,36 +187,9 @@
 
       <section id="answers">
         <h1 class="section-title">PERGUNTAS FREQUENTES</h1>
+
         <div class="container-accordion">
-          <div class="accordion">
-            <button class="accordion-header">
-              <span> Seção 1</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="accordion-body">
-              <p>Conteúdo da primeira seção do acordeãhgiuhpihuhosxhdoivfhsivhb odihoicbdhdoubhfohboshbouhsoihfoishbouuh fobuhoshoidhofhosuhodghsoihgoishgoi hdgoishkkijspigjdisjbpibjikjvkjsvijiosfjo.</p>
-            </div>
-          </div>
-
-          <div class="accordion">
-            <button class="accordion-header">
-              <span> Seção 2</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="accordion-body">
-              <p>Conteúdo da primeira seção do acordeão.</p>
-            </div>
-          </div>
-
-          <div class="accordion">
-            <button class="accordion-header">
-              <span> Seção 3</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="accordion-body">
-              <p>Conteúdo da primeira seção do acordeão.</p>
-            </div>
-          </div>
+          <div id="faq-container"></div>
         </div>
       </section>
 
@@ -292,5 +260,6 @@
     </main>
 
     <script src='src/javascript/script.js'></script>
+    <script src='src/javascript/faq.js'></script>
   </body>
 </html>
