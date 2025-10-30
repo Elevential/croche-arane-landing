@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="src/styles/home.css">
+    <link rel="stylesheet" href="src/styles/features.css">
+    <link rel="stylesheet" href="src/styles/answers.css">
+    <link rel="stylesheet" href="src/styles/contact.css">
+    <link rel="stylesheet" href="src/styles/modal.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Arane</title>
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar">
+        Arane Crochê
+
+        <ul id="nav_list">
+          <li class="nav-item">
+            <a href="#home">Início</a>
+          </li>  
+          <li class="nav-item">
+            <a href="#features">Funcionalidades</a>
+          </li>
+          <li class="nav-item">
+            <a href="#answers">Perguntas frequentes</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact">Contato</a>
+          </li>  
+        </ul>
+
+        <button id="mobile_btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+
+      <div id="mobile_menu">
+        <ul id="mobile_nav_list">
+          <li class="nav-item">
+            <a href="#home">Início</a>
+          </li>  
+          <li class="nav-item">
+            <a href="#funcionalidades">Funcionalidades</a>
+          </li>
+          <li class="nav-item">
+            <a href="#answers">Perguntas frequentes</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact">Contato</a>
+          </li>  
+        </ul>
+      </div>
+    </header>
+
+    <main id="content">
+      <section id="home">
+        <div id="banner">
+          <img src="src/assets/croche_banner.png" alt="">
+        </div>
+
+        <div id="cta">
+          <div class="social-media-buttons">
+            <a href="">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="">
+              <i class="fa-solid fa-at"></i>            
+            </a>
+          </div>
+          
+          <div id="titles">
+            <h1 class="title">
+              Unindo tecnologia e tradição através do crochê.
+            </h1>
+            
+            <p class="subtitle">
+              Feito para quem vive o crochê com paixão — um espaço para criar, ensinar, aprender e compartilhar.
+            </p>
+          </div>
+          <div id="cta_buttons">
+            <a href="#">
+              <img src="src/assets/googleplay.PNG" alt="Botão para baixar app na AppleStore">
+            </a>
+            <a href="#">
+              <img src="src/assets/applestore.PNG" alt="Botão para baixar app na AppleStore">
+            </a>
+          </div>
+          <div id="launch_date">
+            <span class="launch_text">Lançamento previsto para 2026</span>
+            <button id="learn_more_btn">
+                <i id="bell-icon" class="fa-solid fa-bell"></i>
+                Avise-me quando lançar
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <div id="email_modal">
+        <div class="modal_content">
+          <span class="close">&times;</span>
+          <h2>Avise-me quando lançar</h2>
+          <p>Insira seu e-mail para receber uma notificação no lançamento:</p>
+          <form id="notify_form">
+            <input type="email" id="email_input" placeholder="Seu e-mail" required>
+            <button type="submit" id="submit_btn">Enviar</button>
+          </form>
+        </div>
+      </div>
+
+      <section id="motivation"> 
+        <h2 class="motivate">
+          Aqui, cada pessoa pode expandir sua criatividade, desenvolver suas próprias receitas e trocar experiências com quem compartilha o mesmo amor pelos fios.
+        </h2>
+      </section>
+
+      <section id="features">
+        <h1 class="section-title">FUNCIONALIDADES</h1>
+
+        <div id="crochets">
+          <div class="crochet">
+            <div class="crochet-image-wrapper">
+              <img id="make" src="src/assets/crochet_make.PNG" alt="Ilustração de uma mulher com casaco rosa, tecendo um pano verde de crochê">
+            </div>
+            <div class="crochet-text">
+              <h3 class='crochet-title'>
+                Criação de estampa a partir de imagem
+              </h3>
+              <span class="crochet-description">
+                Selecione uma imagem, escolha o tamanho do grid, faça edições e crie sua própria estampa, pronta para ser “crochetada”!
+              </span>
+            </div>
+          </div>
+
+          <div class="crochet">
+            <div class="crochet-image-wrapper">
+              <img src="src/assets/crochet_amostra.PNG" alt="Um pano em uma agulha sendo tecido">
+            </div>
+            <div class="crochet-text">
+              <h3 class='crochet-title'>
+                Cadastro de amostras
+              </h3>
+              <span class="crochet-description">
+                Cadastre amostras com tamanho em cm e número de pontos. Use-as para calcular o grid necessário para seu trabalho final.
+              </span>
+            </div>
+          </div>
+
+          <div class="crochet">
+            <div class="crochet-image-wrapper">
+              <img id="things" src="src/assets/crochet_create.png" alt="Um novelo verde, uma tesoura e uma agulha de crochê">
+            </div>
+            <div class="crochet-text">
+              <h3 class='crochet-title'>
+                Criação livre de estampa
+              </h3>
+              <span class="crochet-description">
+                Crie livremente sua estampa em um grid do tamanho que quiser, usando ou não uma amostra para cálculo.
+              </span>
+            </div>
+          </div>
+
+          <div class="crochet">
+            <div class="crochet-image-wrapper">
+              <img src="src/assets/crochet_partage.PNG" alt="3 mulheres sentadas em uma mesa cheia de linhas, agulhas tecendo.">
+            </div>
+            <div class="crochet-text">
+              <h3 class='crochet-title'>
+                Compartilhamento de estampas
+              </h3>
+              <span class="crochet-description">
+                Compartilhe suas criações com outras crocheteiras, descubra novas inspirações e acompanhe o que outros estão produzindo.
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="answers">
+        <h1 class="section-title">PERGUNTAS FREQUENTES</h1>
+        <div class="container-accordion">
+          <div class="accordion">
+            <button class="accordion-header">
+              <span> Seção 1</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="accordion-body">
+              <p>Conteúdo da primeira seção do acordeãhgiuhpihuhosxhdoivfhsivhb odihoicbdhdoubhfohboshbouhsoihfoishbouuh fobuhoshoidhofhosuhodghsoihgoishgoi hdgoishkkijspigjdisjbpibjikjvkjsvijiosfjo.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion-header">
+              <span> Seção 2</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="accordion-body">
+              <p>Conteúdo da primeira seção do acordeão.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion-header">
+              <span> Seção 3</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="accordion-body">
+              <p>Conteúdo da primeira seção do acordeão.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-title">CONTATO</h2>
+          <p class="subtitle_contact">
+            Deixe aqui sua sugestão, estamos em constante desenvolvimento para criar ferramentas pensadas para facilitar e potencializar sua produção.
+          </p>
+        <div class="contact-content">
+          <img class="img_contact" src='src/assets/crochet_contact.png' alt="Mulher loira com telefone na mão e blusa de crochê lilás">
+
+          <form id="contact_form">
+            <div class="campo">
+              <label for="nome">Nome:</label>
+              <input type="text" name="nome" id="nome" required>
+            </div>
+
+            <div class="campo">
+              <label>E-mail:</label>
+              <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="campo">
+              <label>Descreva sua sugestão/dúvida:</label>
+              <textarea row="20" id="sugestao_duvida" name="sugestao_duvida" required></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+          </form>
+
+          <p id="status_message"></p>
+
+        </div>
+      </section>
+
+      <section id="footer"> 
+        <svg id="footer-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#e89cae" fill-opacity="1" d="M0,128L48,122.7C96,117,192,107,288,106.7C384,107,480,117,576,138.7C672,160,768,192,864,197.3C960,203,1056,181,1152,181.3C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+
+        <div class="footer-content">
+          <div class="footer-left">
+            <div class="social-media-buttons">
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-solid fa-at"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-right">
+            <h4>Arane Crochê</h4>
+            <p>Transformando ideias em pontos, com criatividade e precisão.</p>
+
+            <div class="footer-links">
+              <a href="#home">Início</a>
+              <a href="#features">Funcionalidades</a>
+              <a href="#crochets">Perguntas frequentes</a>
+              <a href="#contact">Contato</a>
+            </div>
+          </div>
+        </div>
+
+        <span class="footer-copy">
+          © 2025 Arane Crochê — Todos os direitos reservados.
+        </span>
+      </section>
+    </main>
+
+    <script src='src/javascript/script.js'></script>
+  </body>
+</html>

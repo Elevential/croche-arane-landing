@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+* {
+    font-family: "Lexend Deca", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F8FFFB;
+}
+
+section:not(#home) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 8%;
+}
+
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.btn-default:hover {
+    background-color: #F8FFFB;
+}
+
+.social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #1d1d1d;
+    border-radius: 50%; /* círculo completo */
+    text-decoration: none;
+    color: #1d1d1d;
+    font-size: 1.25rem;
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
+}
+
+.social-media-buttons a:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+.section-title {
+    color: #0A3109;
+    font-weight: 900;
+    text-align: center;
+    border-bottom: 3px solid #56A572;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+#footer {
+  position: relative;
+  background: linear-gradient(90deg, #e89cae, #f3c3d3);
+  color: #000;
+  overflow: hidden;
+}
+
+#footer-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  padding: 60px 80px 40px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-left,
+.footer-right {
+  width: 50%;
+}
+
+.social-media-buttons a {
+  color: #000;
+  margin-right: 4px;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-media-buttons a:hover {
+  transform: scale(1.1);
+  color: #d07f98;
+  border-color: #d07f98;
+}
+
+.footer-right h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.footer-right p {
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-copy {
+  display: block;
+  text-align: right;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links a {
+    margin: 0 8px;
+  }
+
+  .social-media-buttons {
+    margin-bottom: 20px;
+  }
+}
