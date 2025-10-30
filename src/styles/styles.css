@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 
+@import url('header.css');
+@import url('home.css');
+@import url('features.css');
+@import url('answers.css');
+@import url('contact.css');
+@import url('modal.css');
+
 * {
     font-family: "Lexend Deca", sans-serif;
     margin: 0;
