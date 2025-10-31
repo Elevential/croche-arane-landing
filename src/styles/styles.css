@@ -20,6 +20,10 @@ body {
     background-color: #F8FFFB;
 }
 
+html {
+  color-scheme: only light;
+}
+
 section:not(#home) {
     display: flex;
     flex-direction: column;
