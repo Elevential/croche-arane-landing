@@ -1,13 +1,11 @@
 #email_modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
   inset: 0;
   background-color: rgba(0,0,0,0.5);
-  z-index: 9999;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .modal_content {
@@ -67,4 +65,29 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .modal_content {
+    padding: 20px 16px;
+    border-radius: 15px;
+  }
+
+  .modal_content h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal_content p {
+    font-size: 0.85rem;
+  }
+
+  #email_input {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .modal_content button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 }

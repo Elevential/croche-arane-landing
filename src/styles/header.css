@@ -2,7 +2,7 @@ header {
     width: 100%;
     padding: 20px 8%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    position: sticky;
+    position: fixed;
     z-index: 1000;
     top: 0;
     background-color: #ffffff;
@@ -79,5 +79,19 @@ header {
     
     #mobile_nav_list .nav-item {
         list-style: none;
+    }
+
+    header {
+        padding: 16px 4%;
+    }
+
+    #navbar {
+        flex-wrap: wrap;
+    }
+
+    #mobile_menu.active {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 }

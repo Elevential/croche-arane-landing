@@ -24,6 +24,12 @@ html {
   color-scheme: only light;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
 section:not(#home) {
     display: flex;
     flex-direction: column;
