@@ -14,7 +14,7 @@ $(document).ready(function() {
         submitBtn.prop('disabled', true).text('Enviando... ⏳');
 
         try {
-            const response = await fetch('http://localhost:8000/api/contato/', {
+            const response = await fetch('https://api.arane.com.br/api/contato/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, origem })

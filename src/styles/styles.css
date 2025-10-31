@@ -7,6 +7,7 @@
 @import url('contact.css');
 @import url('modal.css');
 @import url('form.css');
+@import url('footer.css');
 
 * {
     font-family: "Lexend Deca", sans-serif;
@@ -45,10 +46,13 @@ section:not(#home) {
     background-color: #F8FFFB;
 }
 
+.social-media-buttons #icons-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    
 .social-media-buttons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 40px;
     height: 40px;
     background-color: transparent;
@@ -74,36 +78,6 @@ section:not(#home) {
 
 h1 {
     font-size: 3.5rem;
-}
-
-#footer {
-  position: relative;
-  background: linear-gradient(90deg, #e89cae, #f3c3d3);
-  color: #000;
-  overflow: hidden;
-}
-
-#footer-wave {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-}
-
-.footer-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  padding: 60px 80px 40px;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.footer-left,
-.footer-right {
-  width: 50%;
 }
 
 .social-media-buttons a {

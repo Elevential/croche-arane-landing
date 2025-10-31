@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    const imgContact = $('.img_contact');
+
     $('#contact_form').on('submit', async function(e) {
         e.preventDefault();
 
@@ -13,12 +15,10 @@ $(document).ready(function() {
 
         const statusDiv = $('#status_message');
 
-        const imgContact = $('.img_contact');
-
         submitBtn.prop('disabled', true).text('Enviando... ⏳');
 
         try {
-            const response = await fetch('http://localhost:8000/api/contato/', {
+            const response = await fetch('https://api.arane.com.br/api/contato/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ origem, nome, email, mensagem })
