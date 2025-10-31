@@ -1,4 +1,10 @@
 $(document).ready(function() {
+    $('#learn_more_btn').on('click', function(e) {
+        e.preventDefault();
+        $('#email_modal').fadeIn(200); // efeito suave
+        document.getElementById("email_modal").style.display = "flex";
+    });
+    
     const form = $('#notify_form');
     const submitBtn = $('#submit_btn_newsletter');
     const statusDiv = $('#status_message_newsletter');
