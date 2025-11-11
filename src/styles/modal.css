@@ -69,12 +69,14 @@
 
 @media (max-width: 480px) {
   .modal_content {
+    width: 95%;
+    max-width: 320px;
     padding: 20px 16px;
     border-radius: 15px;
   }
 
   .modal_content h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .modal_content p {

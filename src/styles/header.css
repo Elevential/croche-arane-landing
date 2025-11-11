@@ -83,6 +83,7 @@ header {
 
     header {
         padding: 16px 4%;
+        position: fixed;
     }
 
     #navbar {

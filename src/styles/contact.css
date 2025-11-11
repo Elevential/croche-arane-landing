@@ -147,3 +147,10 @@ button[type="submit"]:hover { opacity: 0.95; }
     width: 25%;
   }
 }
+
+@media (max-width: 480px) {
+  .contact-content form {
+    width: 95%;
+    max-width: 320px;
+  }
+}
