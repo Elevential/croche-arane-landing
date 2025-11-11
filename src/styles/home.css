@@ -1,6 +1,6 @@
 #home {
     display: flex;
-    min-height: 100dvh;
+    min-height: auto;
     align-items: stretch;
     height: auto;
     box-sizing: border-box;
@@ -145,7 +145,7 @@
     font-size: 1.5rem;
     color: #ffff;
     line-height: 1.6;
-    margin: 100px 60px 100px 60px;
+    margin: 60px 40px;
 }
 
 #status_message_newsletter {
@@ -188,17 +188,17 @@
 
 @media (max-width: 1200px) {
     #home {
-        height: auto;
-        min-height: 100%;
-        padding-top: 0px;
         flex-direction: column;
         align-items: center;
+        margin: 0;
+        min-height: auto;
     }
 
     #banner,
-    #banner img,
-    #home .shape {
-        display: none;
+    #banner img {
+        width: 100%;
+        margin: 0; /* espaço entre imagem e texto */
+        height: auto;
     }
 
     #cta {
@@ -206,8 +206,7 @@
         text-align: center;
         align-items: center;
         justify-content: flex-start;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding: 20px;
     }
 
     #titles {

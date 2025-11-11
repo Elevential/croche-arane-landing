@@ -58,7 +58,7 @@
   color: #333;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .crochet {
         flex-direction: column;
         text-align: center;
@@ -78,11 +78,13 @@
 
     .crochet img {
         width: 280px;
+        order: 2;
     }
     
     .crochet-text {
         width: 100%;
         gap: 8px;
+        order: 1;
     }
 
     .crochet-text h3 {
