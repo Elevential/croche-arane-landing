@@ -6,7 +6,7 @@ $(document).ready(function() {
     const container = $('#faq-container');
 
     try {
-      const response = await fetch('https://api.arane.com.br/api/perguntas-frequentes?source=landing_page');
+      const response = await fetch('https://api.arane.com.br/api/perguntas-frequentes?origem=landing_page');
 
       if (!response.ok) {
         status.text('Erro ao buscar dados 😕');
