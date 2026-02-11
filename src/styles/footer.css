@@ -140,6 +140,17 @@ footer {
   text-decoration: underline;
 }
 
+#footer_logo {
+    display: inline-block;
+    width: fit-content;
+}
+
+#footer_logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
 @media screen and (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
