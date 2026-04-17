@@ -23,7 +23,7 @@ $(document).ready(function() {
 
       $('#updated_at').text(new Date(data.publicado_em).toLocaleDateString());
 
-      container.html(doc.arquivo);
+      container.html(doc.conteudo);
 
     } catch (error) {
       status.text('Erro inesperado 😕');
