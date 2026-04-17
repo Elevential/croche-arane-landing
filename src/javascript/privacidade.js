@@ -5,7 +5,7 @@ $(document).ready(function() {
     const container = $('#faq-container');
 
     try {
-      const response = await fetch('https://api.arane.com.br/api/termo-uso');
+      const response = await fetch('https://api.arane.com.br/api/termo-uso/');
 
       if (!response.ok) {
         status.text('Erro ao buscar dados 😕');
