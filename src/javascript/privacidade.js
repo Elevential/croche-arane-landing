@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   async function carregarPrivacidadeTermoUso() {
     const status = $('#status_message');
-    const container = $('#faq-container');
+    const container = $('#document-content');
 
     try {
       const response = await fetch('https://api.arane.com.br/api/termo-uso/');
