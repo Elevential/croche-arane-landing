@@ -8,6 +8,10 @@ main {
   padding: 80px 20px 40px;
 }
 
+.document-content {
+  white-space: pre-line;
+}
+
     h1 {
       font-size: 28px;
       margin-bottom: 10px;
