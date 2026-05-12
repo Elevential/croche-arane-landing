@@ -13,7 +13,7 @@
   padding: 30px;
   border-radius: 20px;
   width: 90%;
-  max-width: 400px;
+  max-width: 500px;
   text-align: center;
   position: relative;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
@@ -21,7 +21,10 @@
 
 .modal_content h2 {
   color: #0a3109;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-size: 1.9rem;
+  line-height: 1.05;
+  letter-spacing: -1px;
 }
 
 .modal_content p {
@@ -54,13 +57,18 @@
   color: #fff;
   border: none;
   border-radius: 25px;
-  padding: 10px 24px;
+  padding: 14px 24px;
   cursor: pointer;
   font-weight: 600;
   transition: background-color 0.3s;
+  width: 60%;
+  white-space: nowrap;
+  font-size: 1rem;
 }
 
-.modal_content button { background-color: #d07f98; }
+.modal_content button:hover {
+  background-color: #d07f98;
+}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
@@ -76,7 +84,7 @@
   }
 
   .modal_content h2 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 
   .modal_content p {
