@@ -10,8 +10,8 @@ $(document).ready(function() {
 
         const nome = $('#nome').val();
         const email = $('#email').val();
-        const mensagem = $('#sugestao_duvida').val();
-        const origem = 'landing_page';
+        const mensagem = $('#observacao').val();
+        const origem = $('#pagina').val();
 
         const statusDiv = $('#status_message');
 
