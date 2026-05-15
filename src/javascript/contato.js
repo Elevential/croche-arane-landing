@@ -25,32 +25,38 @@ $(document).ready(function() {
             });
 
             if (response.ok) {
-                statusDiv.html(`
-                    <div class="status-card success">
-                        <p>Mensagem enviada com sucesso! 🎉</p>
-                        <button id="voltar_form">Voltar</button>
-                    </div>
-                `).css('display', 'flex').hide().fadeIn();
+                form.slideUp(200, function() {
+                    statusDiv.html(`
+                        <div class="status-card success">
+                            <p>Mensagem enviada com sucesso! 🎉</p>
+                            <button id="voltar_form">Voltar</button>
+                        </div>
+                    `).css('display', 'flex').hide().fadeIn();
+                });
                 form.hide();
                 imgContact.attr('src', 'src/assets/contato_sucesso.png');
             } else {
-                statusDiv.html(`
-                    <div class="status-card error">
-                        <p>Erro ao enviar mensagem 😕</p>
-                        <button id="voltar_form">Voltar</button>
-                    </div>
-                `).css('display', 'flex').hide().fadeIn();
+                form.slideUp(200, function() {
+                    statusDiv.html(`
+                        <div class="status-card error">
+                            <p>Erro ao enviar mensagem 😕</p>
+                            <button id="voltar_form">Voltar</button>
+                        </div>
+                    `).css('display', 'flex').hide().fadeIn();
+                });
                 form.hide();
                 imgContact.attr('src', 'src/assets/contato_erro.png');
             }
         } catch (error) {
             console.error(error);
-            statusDiv.html(`
-                <div class="status-card error">
-                    <p>Erro de conexão com o servidor 😣</p>
-                    <button id="voltar_form">Voltar</button>
-                </div>
-            `).css('display', 'flex').hide().fadeIn();
+            form.slideUp(200, function() {
+                statusDiv.html(`
+                    <div class="status-card error">
+                        <p>Erro de conexão com o servidor 😣</p>
+                        <button id="voltar_form">Voltar</button>
+                    </div>
+                `).css('display', 'flex').hide().fadeIn();
+            });
             form.hide();
             imgContact.attr('src', 'src/assets/contato_erro.png');
         } finally {
