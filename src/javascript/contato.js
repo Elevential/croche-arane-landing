@@ -65,11 +65,6 @@ $(document).ready(function() {
     });
 
     $(document).on('click', '#voltar_form', function() {
-        $('#status_message').fadeOut(function() {
-            $(this).html(''); // limpa mensagem
-        });
-        $('#contact_form')[0].reset(); // limpa todos os campos
-        $('#contact_form').fadeIn();
-        imgContact.attr('src', 'src/assets/crochet_contact.png');   
+        window.location.href = '/';
     });
 });
