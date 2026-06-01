@@ -25,7 +25,12 @@ $(document).ready(function() {
         header.append($('<i>').addClass('fa-solid fa-chevron-down'));
 
         const body = $('<div>').addClass('accordion-body');
-        body.append($('<p>').text(item.resposta));
+        const respostaComLinks = item.resposta.replace(
+          /(https?:\/\/[^\s]+)/g,
+          '<a href="$1" target="_blank">$1</a>'
+        );
+
+        body.append($('<p>').html(respostaComLinks));
         body.hide(); // inicia fechado
 
         accordion.append(header, body);
