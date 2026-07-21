@@ -25,7 +25,22 @@
     <title>Arane Crochê</title>
   </head>
 
-  <body>
+  <body class="is-loading">
+    <div id="page-loader" role="status" aria-live="polite" aria-label="Carregando">
+      <div class="loader-bundle">
+        <div class="loader-figure">
+          <span class="loader-thread" aria-hidden="true"></span>
+          <img
+            class="loader-spider"
+            src="src/assets/arane_arane.PNG"
+            alt=""
+            width="1582"
+            height="1678"
+          >
+        </div>
+      </div>
+    </div>
+
     <header>
       <nav id="navbar">
         <a href="#home" class="logo" id="nav_logo">
@@ -353,6 +368,7 @@
       </footer>
     </main>
 
+    <script src='src/javascript/loading.js'></script>
     <script src='src/javascript/script.js'></script>
     <script src='src/javascript/faq.js'></script>
     <script src='src/javascript/contato.js'></script>

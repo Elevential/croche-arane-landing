@@ -1,6 +1,6 @@
 header {
     width: 100%;
-    padding: 20px 8%;
+    padding: 20px 8% 28px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     position: fixed;
     z-index: 1000;
@@ -90,7 +90,7 @@ header {
     }
 
     header {
-        padding: 16px 4%;
+        padding: 16px 4% 24px;
         position: fixed;
     }
 
