@@ -115,7 +115,7 @@
         -->
           <div id="launch_date">
             <span class="launch_text">Lançamento previsto para 2026</span>
-            <button id="learn_more_btn">
+            <button id="learn_more_btn" onclick="window.open('https://tally.so/r/vG1vy0', '_blank')">
                 <i id="bell-icon" class="fa-solid fa-bell"></i>
                 Participar do pré-lançamento
             </button>
@@ -123,26 +123,50 @@
         </div>
       </section>
 
-      <!-- Modal -->
-      <div id="email_modal">
-        <div class="modal_content">
-          <span class="close">&times;</span>
-          <h2>Participe do pré-lançamento</h2>
-          <p>Deixe seu e-mail para testar o app antes do lançamento oficial.</p>
-          <form id="notify_form">
-            <input type="email" id="email_input" placeholder="Seu e-mail" required>
-            <button type="submit" id="submit_btn_newsletter">Quero participar</button>
-          </form>
-
-          <div id="status_message_newsletter" style="display: none;"></div>
-        </div>
-      </div>
-
       <section id="motivation"> 
         <h2 class="motivate">
           Aqui, cada pessoa pode expandir sua criatividade, desenvolver suas próprias receitas e trocar experiências com quem compartilha o mesmo amor pelos fios.
         </h2>
       </section>
+
+      <section id="app-preview" aria-labelledby="app-preview-title">
+        <div class="preview-carousel" aria-roledescription="carrossel">
+          <div class="preview-phones">
+            <figure class="phone-frame">
+              <img
+                src="src/assets/previews_app/home.jpg"
+                alt="Tela inicial do aplicativo Arane Crochê"
+                width="390"
+                height="844"
+                loading="lazy"
+              >
+            </figure>
+            <figure class="phone-frame">
+              <img
+                src="src/assets/previews_app/galeria.jpg"
+                alt="Galeria no aplicativo Arane Crochê"
+                width="390"
+                height="844"
+                loading="eager"
+              >
+            </figure>
+            <figure class="phone-frame">
+              <img
+                src="src/assets/previews_app/acervo.jpg"
+                alt="Acervo no aplicativo Arane Crochê"
+                width="390"
+                height="844"
+                loading="lazy"
+              >
+            </figure>
+          </div>
+          <div class="preview-controls">
+            <div class="preview-dots" role="tablist" aria-label="Navegação do preview"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider" aria-hidden="true"></div>
 
       <section id="features">
         <h1 class="section-title">PRIMEIRAS FUNCIONALIDADES</h1>
@@ -220,6 +244,8 @@
         </div>
       </section>
 
+      <div class="section-divider" aria-hidden="true"></div>
+
       <section id="answers">
         <h1 class="section-title">PERGUNTAS FREQUENTES</h1>
 
@@ -227,6 +253,8 @@
           <div id="faq-container"></div>
         </div>
       </section>
+
+      <div class="section-divider" aria-hidden="true"></div>
 
       <section id="contact">
         <h2 class="section-title">CONTATO</h2>
@@ -329,5 +357,6 @@
     <script src='src/javascript/faq.js'></script>
     <script src='src/javascript/contato.js'></script>
     <script src='src/javascript/newsletter.js'></script>
+    <script src='src/javascript/preview.js'></script>
   </body>
 </html>

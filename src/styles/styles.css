@@ -2,6 +2,7 @@
 
 @import url('header.css');
 @import url('home.css');
+@import url('preview.css');
 @import url('features.css');
 @import url('answers.css');
 @import url('contact.css');
@@ -42,6 +43,35 @@ section:not(#home) {
     align-items: center;
     justify-content: flex-start;
     padding: 20px 8%;
+}
+
+section#app-preview {
+    padding: 100px 8% 64px;
+}
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 8%;
+  background-color: #F8FFFB;
+}
+
+.section-divider::before {
+  content: "";
+  display: block;
+  width: min(220px, 45%);
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #56a572 25%,
+    #e89cae 50%,
+    #56a572 75%,
+    transparent 100%
+  );
 }
 
 .btn-default {
