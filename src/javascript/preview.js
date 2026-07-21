@@ -38,8 +38,8 @@
     },
   ];
 
-  const VISIBLE = 3;
   const INTERVAL_MS = 4000;
+  const DESKTOP_VISIBLE = 3;
 
   const root = document.getElementById("app-preview");
   if (!root || slides.length === 0) return;
@@ -47,10 +47,19 @@
   const phones = Array.from(root.querySelectorAll(".phone-frame img"));
   const dotsContainer = root.querySelector(".preview-dots");
   const carousel = root.querySelector(".preview-carousel");
+  const mobileQuery = window.matchMedia("(max-width: 768px)");
 
   let index = 0;
   let timer = null;
   let reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function isMobile() {
+    return mobileQuery.matches;
+  }
+
+  function visibleCount() {
+    return isMobile() ? 1 : DESKTOP_VISIBLE;
+  }
 
   function renderDots() {
     if (!dotsContainer) return;
@@ -65,17 +74,33 @@
     });
   }
 
-  function updatePhones() {
-    phones.forEach((img, slot) => {
-      const slide = slides[(index + slot) % slides.length];
-      img.classList.add("is-fading");
+  function setPhoneImage(img, slide, animate) {
+    if (!img || !slide) return;
 
-      window.setTimeout(() => {
-        img.src = slide.src;
-        img.alt = slide.alt;
-        img.classList.remove("is-fading");
-      }, 180);
-    });
+    if (!animate) {
+      img.src = slide.src;
+      img.alt = slide.alt;
+      return;
+    }
+
+    img.classList.add("is-fading");
+    window.setTimeout(() => {
+      img.src = slide.src;
+      img.alt = slide.alt;
+      img.classList.remove("is-fading");
+    }, 180);
+  }
+
+  function updatePhones(animate) {
+    if (isMobile()) {
+      // Só o telefone do meio fica visível no mobile
+      setPhoneImage(phones[1], slides[index], animate);
+    } else {
+      phones.forEach((img, slot) => {
+        const slide = slides[(index + slot) % slides.length];
+        setPhoneImage(img, slide, animate);
+      });
+    }
 
     if (dotsContainer) {
       Array.from(dotsContainer.children).forEach((dot, i) => {
@@ -87,7 +112,7 @@
 
   function goTo(nextIndex) {
     index = ((nextIndex % slides.length) + slides.length) % slides.length;
-    updatePhones();
+    updatePhones(true);
     restartTimer();
   }
 
@@ -103,7 +128,7 @@
   }
 
   function startTimer() {
-    if (reducedMotion || slides.length <= VISIBLE) return;
+    if (reducedMotion || slides.length <= visibleCount()) return;
     stopTimer();
     timer = window.setInterval(next, INTERVAL_MS);
   }
@@ -113,18 +138,13 @@
     startTimer();
   }
 
-  renderDots();
-  // First paint without fade delay
-  phones.forEach((img, slot) => {
-    const slide = slides[(index + slot) % slides.length];
-    img.src = slide.src;
-    img.alt = slide.alt;
-  });
-  if (dotsContainer) {
-    Array.from(dotsContainer.children).forEach((dot, i) => {
-      dot.classList.toggle("is-active", i === index);
-    });
+  function onViewportChange() {
+    updatePhones(false);
+    restartTimer();
   }
+
+  renderDots();
+  updatePhones(false);
 
   if (carousel) {
     carousel.addEventListener("mouseenter", stopTimer);
@@ -137,6 +157,12 @@
     if (document.hidden) stopTimer();
     else startTimer();
   });
+
+  if (typeof mobileQuery.addEventListener === "function") {
+    mobileQuery.addEventListener("change", onViewportChange);
+  } else if (typeof mobileQuery.addListener === "function") {
+    mobileQuery.addListener(onViewportChange);
+  }
 
   startTimer();
 })();

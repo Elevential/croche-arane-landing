@@ -1,6 +1,17 @@
 #answers {
     margin: 0;
-    padding: 0;
+    padding: 20px 8%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#answers .section-title {
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: none;
 }
 
 #answers::before {
@@ -41,11 +52,11 @@
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 12px;
     border: none;
     font-size: 18px;
     text-align: left;
-    padding: 0;
     font-weight: 600;
     color: #0A3109;
     padding: 10px 5px;
@@ -53,11 +64,20 @@
 
 .accordion-header span {
     flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    min-width: 0;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
     text-align: left;
     font-size: 16px;
+    line-height: 1.35;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.accordion-header i {
+    flex-shrink: 0;
+    margin-top: 2px;
 }
 
 .accordion-body {
@@ -86,4 +106,32 @@
 
 .accordion.active i {
     transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .accordion {
+        padding: 10px;
+        margin-top: 12px;
+    }
+
+    .accordion-header {
+        padding: 8px 2px;
+        gap: 10px;
+    }
+
+    .accordion-header span {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .container-accordion {
+        margin-top: 36px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .accordion-header span {
+        font-size: 14px;
+    }
 }

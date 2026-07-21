@@ -164,32 +164,19 @@
   }
 
   .preview-phones {
-    gap: 12px;
     align-items: center;
-  }
-
-  .phone-frame,
-  .phone-frame:nth-child(2) {
-    width: clamp(100px, 28vw, 140px);
   }
 
   .phone-frame:nth-child(1),
   .phone-frame:nth-child(3) {
-    transform: translateY(28px) rotate(-3deg);
+    display: none;
   }
 
-  @keyframes phone-rise-left {
-    to {
-      opacity: 1;
-      transform: translateY(8px) rotate(-3deg);
-    }
-  }
-
-  @keyframes phone-rise-right {
-    to {
-      opacity: 1;
-      transform: translateY(8px) rotate(3deg);
-    }
+  .phone-frame:nth-child(2) {
+    width: min(280px, 70vw);
+    animation-name: phone-rise;
+    animation-delay: 0.1s;
+    transform: translateY(28px);
   }
 }
 
@@ -214,4 +201,11 @@
   .phone-frame img {
     transition: none;
   }
+
+  @media (max-width: 768px) {
+    .phone-frame:nth-child(2) {
+      transform: none;
+    }
+  }
 }
+
