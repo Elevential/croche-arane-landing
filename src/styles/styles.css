@@ -133,7 +133,8 @@ h1 {
     font-size: 3.5rem;
 }
 
-h1.section-title {
+h1.section-title,
+h2.section-title {
     font-size: clamp(1.45rem, 4.5vw, 2.5rem);
 }
 
@@ -183,6 +184,7 @@ h1.section-title {
 /* 📱 Responsivo */
 @media (max-width: 768px) {
   h1.section-title,
+  h2.section-title,
   .section-title {
     font-size: 1.5rem;
     line-height: 1.3;
@@ -211,6 +213,7 @@ h1.section-title {
 
 @media (max-width: 480px) {
   h1.section-title,
+  h2.section-title,
   .section-title {
     font-size: 1.35rem;
   }

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /excluir_conta/
+
+Sitemap: https://arane.com.br/sitemap.xml
