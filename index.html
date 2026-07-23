@@ -14,8 +14,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light">
-    <meta name="description" content="Arane Crochê é o app brasileiro para criar estampas a partir de imagens, cadastrar amostras, compartilhar criações e acompanhar seu crochê carreira a carreira. Pré-lançamento 2026.">
-    <meta name="keywords" content="crochê, app crochê, estampa crochê, gráfico crochê, amostra crochê, tracker crochê, Arane Crochê">
+    <meta name="description" content="Arane Crochê — aplicativo de crochê feito no Brasil. Crie estampas a partir de imagens, cadastre amostras, compartilhe criações e acompanhe seu projeto carreira a carreira. Conteúdos de crochê também no YouTube @aranecroche. Pré-lançamento 2026.">
+    <meta name="keywords" content="aplicativo crochê, app crochê, crochê aplicativo, Arane Crochê, Arane, aplicativo de crochê, estampa crochê, gráfico crochê, amostra crochê, tracker crochê, crochê digital, filet crochet, tapestry, corner to corner, rede social crochê">
     <meta name="author" content="Arane Crochê">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://arane.com.br/">
@@ -25,17 +25,17 @@
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Arane Crochê">
     <meta property="og:url" content="https://arane.com.br/">
-    <meta property="og:title" content="Arane Crochê | App de estampas e tracker para crochê">
-    <meta property="og:description" content="Crie estampas, cadastre amostras e acompanhe seus projetos de crochê. Feito no Brasil — pré-lançamento 2026.">
+    <meta property="og:title" content="Arane Crochê | Aplicativo de crochê para estampas e tracker">
+    <meta property="og:description" content="O aplicativo de crochê brasileiro para criar estampas, cadastrar amostras e acompanhar seus projetos. Siga @aranecroche no Instagram.">
     <meta property="og:image" content="https://arane.com.br/src/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Arane Crochê — onde a tecnologia se une à tradição">
+    <meta property="og:image:alt" content="Arane Crochê — aplicativo de crochê brasileiro">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Arane Crochê | App de estampas e tracker para crochê">
-    <meta name="twitter:description" content="Crie estampas, cadastre amostras e acompanhe seus projetos de crochê. Feito no Brasil — pré-lançamento 2026.">
+    <meta name="twitter:title" content="Arane Crochê | Aplicativo de crochê para estampas e tracker">
+    <meta name="twitter:description" content="O aplicativo de crochê brasileiro para criar estampas, cadastrar amostras e acompanhar seus projetos. Siga @aranecroche no Instagram.">
     <meta name="twitter:image" content="https://arane.com.br/src/assets/og-image.jpg">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -45,7 +45,7 @@
     <link rel="icon" type="image/png" href="src/assets/favicon-96x96.png" sizes="96x96" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Arane Crochê | App de estampas e tracker para crochê</title>
+    <title>Arane Crochê | Aplicativo de crochê para estampas e tracker</title>
 
     <script type="application/ld+json">
     {
@@ -55,9 +55,15 @@
           "@type": "Organization",
           "@id": "https://arane.com.br/#organization",
           "name": "Arane Crochê",
+          "alternateName": ["Arane", "Arane Croche", "Aplicativo Arane Crochê"],
           "url": "https://arane.com.br/",
-          "logo": "https://arane.com.br/src/assets/logo.png",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://arane.com.br/src/assets/logo.png"
+          },
+          "image": "https://arane.com.br/src/assets/og-image.jpg",
           "email": "suporte@arane.com.br",
+          "description": "Arane Crochê é um aplicativo de crochê brasileiro para criar estampas, cadastrar amostras e acompanhar projetos.",
           "sameAs": [
             "https://www.instagram.com/aranecroche/",
             "https://www.youtube.com/@aranecroche",
@@ -65,23 +71,49 @@
           ]
         },
         {
+          "@type": "SoftwareApplication",
+          "@id": "https://arane.com.br/#app",
+          "name": "Arane Crochê",
+          "alternateName": ["Arane", "aplicativo de crochê Arane"],
+          "applicationCategory": "LifestyleApplication",
+          "operatingSystem": "Android, iOS",
+          "description": "Aplicativo de crochê para criar estampas a partir de imagens, cadastrar amostras, compartilhar criações e acompanhar o trabalho carreira a carreira.",
+          "url": "https://arane.com.br/",
+          "image": "https://arane.com.br/src/assets/og-image.jpg",
+          "author": { "@id": "https://arane.com.br/#organization" },
+          "publisher": { "@id": "https://arane.com.br/#organization" },
+          "inLanguage": "pt-BR",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/PreOrder",
+            "price": "0",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
           "@type": "WebSite",
           "@id": "https://arane.com.br/#website",
           "url": "https://arane.com.br/",
           "name": "Arane Crochê",
-          "description": "App brasileiro para criar estampas de crochê, cadastrar amostras e acompanhar projetos.",
+          "alternateName": "Aplicativo de crochê Arane",
+          "description": "Site oficial do aplicativo de crochê Arane Crochê. Crie estampas, cadastre amostras e acompanhe projetos.",
           "publisher": { "@id": "https://arane.com.br/#organization" },
+          "about": { "@id": "https://arane.com.br/#app" },
           "inLanguage": "pt-BR"
         },
         {
           "@type": "WebPage",
           "@id": "https://arane.com.br/#webpage",
           "url": "https://arane.com.br/",
-          "name": "Arane Crochê | App de estampas e tracker para crochê",
+          "name": "Arane Crochê | App de crochê para criar estampas, amostras e acompanhar seus projetos",
           "isPartOf": { "@id": "https://arane.com.br/#website" },
-          "about": { "@id": "https://arane.com.br/#organization" },
-          "description": "Arane Crochê é o app brasileiro para criar estampas a partir de imagens, cadastrar amostras, compartilhar criações e acompanhar seu crochê carreira a carreira.",
-          "inLanguage": "pt-BR"
+          "about": { "@id": "https://arane.com.br/#app" },
+          "description": "Conheça o Arane Crochê, o aplicativo de crochê brasileiro para criar estampas, cadastrar amostras e acompanhar seus projetos.",
+          "inLanguage": "pt-BR",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://arane.com.br/src/assets/og-image.jpg"
+          }
         }
       ]
     }
@@ -156,20 +188,24 @@
 
         <div id="cta">
           <div class="social-media-buttons">
-            <a id="icons-media" href="https://www.instagram.com/aranecroche/" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-instagram"></i>
+            <a id="icons-media" href="https://www.instagram.com/aranecroche/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Arane Crochê @aranecroche">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span class="sr-only">Instagram Arane Crochê (@aranecroche)</span>
             </a>
 
-            <a id="icons-media" href="https://www.youtube.com/@aranecroche" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-youtube"></i>
+            <a id="icons-media" href="https://www.youtube.com/@aranecroche" target="_blank" rel="noopener noreferrer" aria-label="YouTube Arane Crochê — vídeos de crochê">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+              <span class="sr-only">YouTube Arane Crochê — canal de crochê @aranecroche</span>
             </a>
 
-            <a id="icons-media" href="https://br.pinterest.com/0trdbgis3vwghqsi8enpjunfxs5b7t/" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-pinterest"></i>
+            <a id="icons-media" href="https://br.pinterest.com/0trdbgis3vwghqsi8enpjunfxs5b7t/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest Arane Crochê">
+              <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
+              <span class="sr-only">Pinterest Arane Crochê</span>
             </a>
 
-            <a id="icons-media" href="mailto:suporte@arane.com.br" target="_blank" rel="noopener noreferrer">
-              <i class="fa-solid fa-at"></i>
+            <a id="icons-media" href="mailto:suporte@arane.com.br" target="_blank" rel="noopener noreferrer" aria-label="E-mail suporte Arane Crochê">
+              <i class="fa-solid fa-at" aria-hidden="true"></i>
+              <span class="sr-only">E-mail suporte@arane.com.br</span>
             </a>
           </div>
           
@@ -179,7 +215,8 @@
             </h1>
             
             <p class="subtitle">
-              Feito no Brasil! <span class="fi fi-br"></span> <br>Para quem vive o crochê com paixão — um espaço para criar, ensinar, aprender e compartilhar.
+              Feito no Brasil! <span class="fi fi-br"></span> <br>
+              Arane Crochê é o aplicativo de crochê para criar, ensinar, aprender e compartilhar — do gráfico à execução, carreira a carreira.
             </p>
           </div>
           <!-- <div id="cta_buttons">
@@ -382,12 +419,14 @@
             </a>
             <p>Transformando ideias em pontos, com criatividade e precisão.</p>
             <div id="footer_social_media">
-              <a class="footer-link" href="https://www.instagram.com/aranecroche/" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-instagram"></i>
+              <a class="footer-link" href="https://www.instagram.com/aranecroche/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Arane Crochê @aranecroche">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <span class="sr-only">Instagram Arane Crochê (@aranecroche)</span>
               </a>
 
-              <a class="footer-link" href="https://www.youtube.com/@aranecroche" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-youtube"></i>
+              <a class="footer-link" href="https://www.youtube.com/@aranecroche" target="_blank" rel="noopener noreferrer" aria-label="YouTube Arane Crochê — vídeos de crochê">
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                <span class="sr-only">YouTube Arane Crochê — canal de crochê @aranecroche</span>
               </a>
 
               <a class="footer-link" href="https://br.pinterest.com/0trdbgis3vwghqsi8enpjunfxs5b7t/" target="_blank" rel="noopener noreferrer">
