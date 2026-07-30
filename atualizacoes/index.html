@@ -14,56 +14,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light">
-    <meta name="description" content="Política de Privacidade e Termos de Uso do aplicativo e site Arane Crochê.">
+    <meta name="description" content="Notas de atualização do aplicativo Arane Crochê — novidades, melhorias e correções de cada versão.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://arane.com.br/politica-privacidade/">
+    <link rel="canonical" href="https://arane.com.br/atualizacoes/">
 
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:url" content="https://arane.com.br/politica-privacidade/">
-    <meta property="og:title" content="Política de Privacidade e Termos de Uso | Arane Crochê">
-    <meta property="og:description" content="Política de Privacidade e Termos de Uso do aplicativo e site Arane Crochê.">
+    <meta property="og:url" content="https://arane.com.br/atualizacoes/">
+    <meta property="og:title" content="Atualizações | Arane Crochê">
+    <meta property="og:description" content="Notas de atualização do aplicativo Arane Crochê — novidades, melhorias e correções de cada versão.">
     <meta property="og:image" content="https://arane.com.br/src/assets/og-image.jpg">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
-
     <link rel="stylesheet" href="/src/styles/styles.css">
-    <link rel="stylesheet" href="/src/styles/privacidade.css">
+    <link rel="stylesheet" href="/src/styles/atualizacoes.css">
     <link rel="icon" type="image/png" href="/src/assets/favicon-96x96.png" sizes="96x96" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Política de Privacidade e Termos de Uso | Arane Crochê</title>
-</head>
+    <title>Atualizações | Arane Crochê</title>
+  </head>
 
-<body>
-
-  <header>
+  <body>
+    <header>
       <nav id="navbar">
         <a href="/" class="logo" id="nav_logo">
           <img src="/src/assets/logo.png" alt="Arane Crochê">
         </a>
-  </header>
+      </nav>
+    </header>
 
-  <main id="content">
-      <div class="container">
-        <h1>Política de Privacidade e Termos de Uso</h1>
-        <div class="subtitle">
-          Última atualização: <span id="updated_at">Carregando...</span>
-        </div>
+    <main id="content">
+      <div class="updates-page">
+        <h1 class="page-title">Atualizações</h1>
+        <p class="page-subtitle">
+          Novidades do app · <span id="latest-version">Carregando...</span>
+        </p>
 
-        <!-- Onde o conteúdo vai entrar -->
-        <div id="document-content" class="document-content"></div>
-
-        <!-- Status -->
-        <div id="status" class="status"></div>
+        <div id="updates-list" aria-live="polite"></div>
+        <div id="updates-pagination"></div>
+        <div id="status" class="updates-status"></div>
       </div>
 
       <div id="site-footer"></div>
     </main>
 
-    <script src='/src/javascript/footer.js'></script>
-    <script src='/src/javascript/script.js'></script>
-    <script src='/src/javascript/privacidade.js'></script>
+    <script src="/src/javascript/footer.js"></script>
+    <script src="/src/javascript/script.js"></script>
+    <script src="/src/javascript/atualizacoes.js"></script>
   </body>
 </html>

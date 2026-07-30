@@ -1,0 +1,173 @@
+main {
+  padding-top: 80px;
+}
+
+.updates-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
+}
+
+.updates-page .page-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #0a3109;
+}
+
+.updates-page .page-subtitle {
+  color: #777;
+  margin-bottom: 36px;
+  font-size: 1rem;
+}
+
+#updates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.update-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(10, 49, 9, 0.12);
+}
+
+.update-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.update-version {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #e89cae;
+}
+
+.update-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.update-section-title {
+  margin: 8px 0 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0a3109;
+}
+
+.update-section-subtitle {
+  margin: 4px 0 0;
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: #0a3109;
+}
+
+.update-body p {
+  margin: 0;
+  line-height: 1.65;
+  color: #333;
+  font-size: 15px;
+}
+
+.update-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.update-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  line-height: 1.65;
+  color: #333;
+  font-size: 15px;
+}
+
+.update-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 1px;
+  background: #56a572;
+}
+
+.update-file {
+  color: #0a3109;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  width: fit-content;
+}
+
+.update-file:hover {
+  color: #e89cae;
+}
+
+#updates-pagination {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.page-btn {
+  border: 1px solid #0a3109;
+  background: transparent;
+  color: #0a3109;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: #e89cae;
+  border-color: #e89cae;
+  color: #fff;
+}
+
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.page-info {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.updates-status {
+  text-align: center;
+  color: #666;
+  margin-top: 24px;
+}
+
+.updates-status.error {
+  color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .updates-page {
+    padding: 60px 16px 32px;
+  }
+
+  .updates-page .page-title {
+    font-size: 1.5rem;
+  }
+
+  .update-version {
+    font-size: 1.25rem;
+  }
+}

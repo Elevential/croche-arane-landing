@@ -5,14 +5,27 @@ $(document).ready(function() {
         $(this).parent().addClass('active');
     });
 
-    $("#nav_list .nav-item a").click(function(e) {
+    $("#nav_list .nav-item a, #mobile_nav_list .nav-item a").click(function(e) {
+        const target = $(this).attr("href") || "";
+
+        // Links para outras páginas (ex.: atualizações) navegam normalmente
+        if (!target.startsWith("#")) {
+            $('#mobile_menu').removeClass('active');
+            $('#mobile_btn').find('i').removeClass('fa-x').addClass('fa-bars');
+            return;
+        }
+
         e.preventDefault();
-        const target = $(this).attr("href");
+        const $section = $(target);
+        if (!$section.length) return;
 
         // scroll suave
         $("html, body").animate({
-        scrollTop: $(target).offset().top
+            scrollTop: $section.offset().top
         }, 600);
+
+        $('#mobile_menu').removeClass('active');
+        $('#mobile_btn').find('i').removeClass('fa-x').addClass('fa-bars');
     });
 
     // scroll spy
