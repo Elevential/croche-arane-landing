@@ -1,5 +1,5 @@
 (function () {
-  const API_URL = "https://api.arane.com.br/api/notas-atualizacao";
+  const API_URL = "https://api-hmg.arane.com.br/api/notas-atualizacao";
   let currentPage = 1;
 
   function escapeHtml(text) {
