@@ -1,7 +1,7 @@
 body > header,
 header:has(#navbar) {
     width: 100%;
-    padding: 10px 5%;
+    padding: 10px 4%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     position: fixed;
     z-index: 1000;
@@ -30,7 +30,7 @@ header:has(#navbar) {
 #nav_list {
     display: flex;
     list-style: none;
-    gap: 18px;
+    gap: 48px;
     flex-wrap: nowrap;
     align-items: center;
     margin: 0;
@@ -80,12 +80,26 @@ header:has(#navbar) {
 #nav_logo img {
   height: 36px;
   width: auto;
-  max-width: 140px;
+  max-width: 130px;
   object-fit: contain;
 }
 
-/* Notebooks ~14" (ex.: 1366px): menu compacto em hambúrguer */
-@media screen and (max-width: 1366px) {
+/* Telas maiores: um pouco mais de respiro */
+@media screen and (min-width: 1600px) {
+    body > header,
+    header:has(#navbar) {
+        padding: 12px 6%;
+    }
+
+    #nav_logo,
+    #nav_logo img {
+        height: 40px;
+        max-width: 150px;
+    }
+}
+
+/* Hambúrguer só em telas bem menores (tablet/celular), não no notebook 14" */
+@media screen and (max-width: 900px) {
     #nav_list {
         display: none;
     }
@@ -127,8 +141,8 @@ header:has(#navbar) {
         font-size: 14px;
     }
 
-    header:has(#navbar),
-    body > header {
+    body > header,
+    header:has(#navbar) {
         padding: 8px 4%;
     }
 
@@ -145,20 +159,5 @@ header:has(#navbar) {
 
     #site-header {
       min-height: 52px;
-    }
-}
-
-@media screen and (min-width: 1367px) and (max-width: 1600px) {
-    header:has(#navbar),
-    body > header {
-        padding: 10px 4%;
-    }
-
-    #nav_list {
-        gap: 16px;
-    }
-
-    .nav-item a {
-        font-size: 11px;
     }
 }
