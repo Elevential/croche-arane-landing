@@ -1,7 +1,7 @@
 body > header,
 header:has(#navbar) {
     width: 100%;
-    padding: 10px 4%;
+    padding: 20px 8% 28px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     position: fixed;
     z-index: 1000;
@@ -13,7 +13,7 @@ header:has(#navbar) {
 }
 
 #site-header {
-  min-height: 56px;
+  min-height: 78px;
 }
 
 #navbar {
@@ -21,18 +21,13 @@ header:has(#navbar) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 36px;
-    height: auto;
-    flex-wrap: nowrap;
-    gap: 12px;
+    height: 30px;
 }
 
 #nav_list {
     display: flex;
     list-style: none;
     gap: 48px;
-    flex-wrap: nowrap;
-    align-items: center;
     margin: 0;
     padding: 0;
 }
@@ -59,7 +54,7 @@ header:has(#navbar) {
     display: none;
     border: none;
     background-color: transparent;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     cursor: pointer;
     color: #0A3109;
     line-height: 1;
@@ -71,93 +66,56 @@ header:has(#navbar) {
 }
 
 #nav_logo {
-  height: 36px;
+  height: 100%;
   display: flex;
   align-items: center;
   flex-shrink: 0;
 }
 
 #nav_logo img {
-  height: 36px;
+  height: 220%;
   width: auto;
-  max-width: 130px;
-  object-fit: contain;
 }
 
-/* Telas maiores: um pouco mais de respiro */
-@media screen and (min-width: 1600px) {
-    body > header,
-    header:has(#navbar) {
-        padding: 12px 6%;
-    }
-
-    #nav_logo,
-    #nav_logo img {
-        height: 40px;
-        max-width: 150px;
-    }
-}
-
-/* Hambúrguer só em telas bem menores (tablet/celular), não no notebook 14" */
-@media screen and (max-width: 900px) {
+/* Hambúrguer só no celular — notebooks 14" ficam com menu horizontal */
+@media screen and (max-width: 768px) {
     #nav_list {
         display: none;
     }
 
     #mobile_btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        display: block;
     }
 
     #mobile_menu.active {
         display: flex;
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
         width: 100%;
-        margin-top: 8px;
-        padding-top: 8px;
-        border-top: 1px solid rgba(10, 49, 9, 0.08);
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     #mobile_nav_list {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
-        margin: 0;
+        gap: 12px;
+        margin: 12px 0;
         padding: 0;
         list-style: none;
     }
 
     #mobile_nav_list .nav-item {
         list-style: none;
-        width: 100%;
-    }
-
-    #mobile_nav_list .nav-item a {
-        display: block;
-        padding: 4px 0;
-        font-size: 14px;
     }
 
     body > header,
     header:has(#navbar) {
-        padding: 8px 4%;
+        padding: 16px 4% 24px;
     }
 
     #navbar {
-        flex-wrap: nowrap;
-        min-height: 36px;
-    }
-
-    #nav_logo,
-    #nav_logo img {
-      height: 36px;
-      max-width: 130px;
-    }
-
-    #site-header {
-      min-height: 52px;
+        flex-wrap: wrap;
     }
 }
