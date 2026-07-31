@@ -103,7 +103,7 @@
         $('<p class="update-version"></p>').text("Versão " + (item.versao || ""))
       );
 
-      const dateLabel = formatDate(item.data || item.publicado_em || item.created_at);
+      const dateLabel = formatDate(item.data_lancamento || item.data || item.publicado_em || item.created_at);
       if (dateLabel) {
         header.append($('<p class="update-date"></p>').text(dateLabel));
       }
