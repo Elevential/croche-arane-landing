@@ -1,5 +1,5 @@
 (function () {
-  const API_URL = "https://api-hmg.arane.com.br/api/notas-atualizacao";
+  const API_URL = "https://api.arane.com.br/api/notas-atualizacao";
   let currentPage = 1;
 
   function escapeHtml(text) {
@@ -97,7 +97,7 @@
 
     results.forEach(function (item) {
       const card = $('<article class="update-card"></article>');
-      const header = $('<header class="update-header"></header>');
+      const header = $('<div class="update-header"></div>');
 
       header.append(
         $('<p class="update-version"></p>').text("Versão " + (item.versao || ""))
