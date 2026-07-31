@@ -31,8 +31,13 @@
       }
 
       if (/^##\s+/.test(line)) {
+        const title = line.replace(/^##\s+/, "").trim();
+        // Não exibe o título genérico "Notas de atualização"
+        if (/^notas\s+de\s+atualiza/i.test(title)) {
+          return;
+        }
         closeList();
-        html.push('<h2 class="update-section-title">' + escapeHtml(line.replace(/^##\s+/, "")) + "</h2>");
+        html.push('<h2 class="update-section-title">' + escapeHtml(title) + "</h2>");
         return;
       }
 
@@ -59,6 +64,21 @@
     return html.join("");
   }
 
+  function formatDate(value) {
+    if (!value) return "";
+
+    const date = value instanceof Date ? value : new Date(value);
+    if (Number.isNaN(date.getTime())) {
+      return String(value);
+    }
+
+    return date.toLocaleDateString("pt-BR", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  }
+
   function renderNotes(payload) {
     const container = $("#updates-list");
     const status = $("#status");
@@ -67,8 +87,9 @@
     container.empty();
 
     if (!results.length) {
-      status.text("Nenhuma atualização encontrada.").removeClass("error");
+      status.text("Ainda não há nenhuma atualização").removeClass("error");
       $("#updates-pagination").hide();
+      $("#latest-version").text("—");
       return;
     }
 
@@ -76,9 +97,18 @@
 
     results.forEach(function (item) {
       const card = $('<article class="update-card"></article>');
-      card.append(
-        $('<h2 class="update-version"></h2>').text("Versão " + (item.versao || ""))
+      const header = $('<header class="update-header"></header>');
+
+      header.append(
+        $('<p class="update-version"></p>').text("Versão " + (item.versao || ""))
       );
+
+      const dateLabel = formatDate(item.data || item.publicado_em || item.created_at);
+      if (dateLabel) {
+        header.append($('<p class="update-date"></p>').text(dateLabel));
+      }
+
+      card.append(header);
       card.append(
         $('<div class="update-body"></div>').html(markdownToHtml(item.conteudo))
       );

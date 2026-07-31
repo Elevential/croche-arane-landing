@@ -39,11 +39,26 @@ main {
   padding-bottom: 0;
 }
 
+.update-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .update-version {
   margin: 0;
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: #e89cae;
+  line-height: 1.3;
+}
+
+.update-date {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0a3109;
+  line-height: 1.3;
 }
 
 .update-body {
@@ -167,7 +182,8 @@ main {
     font-size: 1.5rem;
   }
 
-  .update-version {
-    font-size: 1.25rem;
+  .update-version,
+  .update-date {
+    font-size: 1.05rem;
   }
 }
