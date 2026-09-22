@@ -1,11 +1,12 @@
 #app-bests {
   width: 100%;
-  padding: 64px 8% 48px;
+  padding: 48px 8% 48px;
   box-sizing: border-box;
   background-color: #F8FFFB;
 }
 
 #app-bests .section-title {
+  margin-top: 0;
   margin-bottom: 36px;
 }
 

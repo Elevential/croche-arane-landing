@@ -1,10 +1,5 @@
 * { box-sizing: border-box; }
 
-.section-title {
-  font-size: 2rem;
-  text-align: center;
-}
-
 .subtitle_contact {
   max-width: 900px;
   margin: 20px auto 20px auto;
