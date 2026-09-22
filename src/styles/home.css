@@ -239,16 +239,17 @@ section#motivation .motivate {
         align-items: center;
         justify-content: flex-start;
         padding: 20px;
-        order: 1;
+        order: 2;
     }
 
     #banner {
-        order: 2;
+        order: 1;
         width: 100%;
+        padding-top: 8px;
     }
 
     #titles {
-        padding-top: 40px;
+        padding-top: 16px;
     }
 
     #titles .title {
