@@ -40,7 +40,7 @@
           escapeHtml(imageUrl) +
           '" alt="Estampa de ' +
           escapeHtml(name) +
-          '" loading="lazy">' +
+          '" loading="lazy" referrerpolicy="no-referrer" decoding="async">' +
           '<p class="best-username">' +
           escapeHtml(name) +
           "</p>" +

@@ -32,21 +32,23 @@ header:has(#navbar):has(#mobile_menu.active) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 30px;
+    min-height: 30px;
+    height: auto;
 }
 
 #nav_list {
     display: flex;
     list-style: none;
-    gap: 28px;
+    gap: 20px;
     margin: 0;
     padding: 0;
+    flex-wrap: nowrap;
 }
 
 .nav-item a {
     text-decoration: none;
     color: #1d1d1dad;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     white-space: nowrap;
 }
@@ -88,8 +90,8 @@ header:has(#navbar):has(#mobile_menu.active) {
   width: auto;
 }
 
-/* Hambúrguer só no celular — notebooks 14" ficam com menu horizontal */
-@media screen and (max-width: 768px) {
+/* Menu horizontal só em telas largas — evita navbar estourada */
+@media screen and (max-width: 1100px) {
     #nav_list {
         display: none;
     }
