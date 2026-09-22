@@ -70,6 +70,18 @@ $(document).ready(function () {
     });
   }
 
+  function bindHeaderScroll() {
+    const $header = $("header:has(#navbar)");
+    if (!$header.length) return;
+
+    function updateHeaderBg() {
+      $header.toggleClass("scrolled", $(window).scrollTop() > 20);
+    }
+
+    $(window).off("scroll.araneHeader").on("scroll.araneHeader", updateHeaderBg);
+    updateHeaderBg();
+  }
+
   function bindScrollSpy() {
     const sections = $("section");
     const navItems = $("#nav_list .nav-item");
@@ -95,6 +107,7 @@ $(document).ready(function () {
 
   function initNav() {
     bindNavbar();
+    bindHeaderScroll();
     bindScrollSpy();
 
     // Ao abrir a home com /#features (vindo de outra página), rola até a seção

@@ -140,11 +140,36 @@
 
     <main id="content">
       <section id="home">
-        <div id="banner">
-          <img src="src/assets/croche_banner.png" alt="Ilustração de crochê da Arane Crochê">
+        <div id="cta">
+          <div id="titles">
+            <h1 class="title">
+              Onde a tecnologia se une à tradição
+            </h1>
+            
+            <p class="subtitle">
+              Feito no Brasil! <span class="fi fi-br"></span>
+            </p>
+          </div>
+          <div id="cta_buttons">
+            <a href="#">
+              <img src="src/assets/google.jpg" alt="Baixar na Google Play">
+            </a>
+            <a href="#">
+              <img src="src/assets/apple.jpg" alt="Baixar na App Store">
+            </a>
+          </div>
+          <!--
+          <div id="launch_date">
+            <span class="launch_text">Lançamento previsto para 2026</span>
+            <button id="learn_more_btn" onclick="window.open('https://tally.so/r/vG1vy0', '_blank')">
+                <i id="bell-icon" class="fa-solid fa-bell"></i>
+                Participar do pré-lançamento
+            </button>
+          </div>
+          -->
         </div>
 
-        <div id="cta">
+        <div id="banner">
           <div class="social-media-buttons">
             <a id="icons-media" href="https://www.instagram.com/aranecroche/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Arane Crochê @aranecroche">
               <i class="fa-brands fa-instagram" aria-hidden="true"></i>
@@ -166,77 +191,37 @@
               <span class="sr-only">E-mail suporte@arane.com.br</span>
             </a>
           </div>
-          
-          <div id="titles">
-            <h1 class="title">
-              Onde a tecnologia se une à tradição
-            </h1>
-            
-            <p class="subtitle">
-              Feito no Brasil! <span class="fi fi-br"></span> <br>
-              Arane Crochê é o aplicativo de crochê para criar, ensinar, aprender e compartilhar — do gráfico à execução, carreira a carreira.
-            </p>
-          </div>
-          <!-- <div id="cta_buttons">
-            <a href="#">
-              <img src="src/assets/googleplay.PNG" alt="Botão para baixar app na AppleStore">
-            </a>
-            <a href="#">
-              <img src="src/assets/applestore.PNG" alt="Botão para baixar app na AppleStore">
-            </a>
-          </div>
-        -->
-          <div id="launch_date">
-            <span class="launch_text">Lançamento previsto para 2026</span>
-            <button id="learn_more_btn" onclick="window.open('https://tally.so/r/vG1vy0', '_blank')">
-                <i id="bell-icon" class="fa-solid fa-bell"></i>
-                Participar do pré-lançamento
-            </button>
-          </div>
+          <img src="src/assets/arane_landing_page.png" alt="Ilustração de crochê da Arane Crochê">
         </div>
       </section>
+
+      <div class="section-divider" aria-hidden="true"></div>
+
+      <section id="app-bests" aria-label="Estampas em alta no Arane Crochê">
+        <h2 class="section-title">EM ALTA NO ARANE</h2>
+        <div id="bests-container"></div>
+      </section>
+
+      <div class="section-divider" aria-hidden="true"></div>
+
+      <section id="app-preview" aria-label="Exemplos do aplicativo Arane Crochê">
+        <p class="app-examples-text">
+          Arane Crochê é o aplicativo de crochê para criar, ensinar, aprender e compartilhar — do gráfico à execução, carreira a carreira.
+        </p>
+        <img
+          class="app-examples"
+          src="src/assets/app_examples.png"
+          alt="Exemplos de telas do aplicativo Arane Crochê"
+          loading="lazy"
+        >
+      </section>
+
+      <div class="section-divider" aria-hidden="true"></div>
 
       <section id="motivation"> 
         <h2 class="motivate">
           Aqui, cada pessoa pode expandir sua criatividade, desenvolver suas próprias receitas e trocar experiências com quem compartilha o mesmo amor pelos fios.
         </h2>
-      </section>
-
-      <section id="app-preview" aria-labelledby="app-preview-title">
-        <div class="preview-carousel" aria-roledescription="carrossel">
-          <div class="preview-phones">
-            <figure class="phone-frame">
-              <img
-                src="src/assets/previews_app/home.jpg"
-                alt="Tela inicial do aplicativo Arane Crochê"
-                width="390"
-                height="844"
-                loading="lazy"
-              >
-            </figure>
-            <figure class="phone-frame">
-              <img
-                src="src/assets/previews_app/galeria.jpg"
-                alt="Galeria no aplicativo Arane Crochê"
-                width="390"
-                height="844"
-                loading="eager"
-              >
-            </figure>
-            <figure class="phone-frame">
-              <img
-                src="src/assets/previews_app/acervo.jpg"
-                alt="Acervo no aplicativo Arane Crochê"
-                width="390"
-                height="844"
-                loading="lazy"
-              >
-            </figure>
-          </div>
-          <div class="preview-controls">
-            <div class="preview-dots" role="tablist" aria-label="Navegação do preview"></div>
-          </div>
-        </div>
       </section>
 
       <div class="section-divider" aria-hidden="true"></div>
@@ -376,6 +361,6 @@
     <script src='src/javascript/faq.js'></script>
     <script src='src/javascript/contato.js'></script>
     <script src='src/javascript/newsletter.js'></script>
-    <script src='src/javascript/preview.js'></script>
+    <script src='src/javascript/bests.js'></script>
   </body>
 </html>

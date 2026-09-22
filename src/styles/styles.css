@@ -3,6 +3,7 @@
 @import url('loading.css');
 @import url('header.css');
 @import url('home.css');
+@import url('bests.css');
 @import url('preview.css');
 @import url('features.css');
 @import url('answers.css');
@@ -55,11 +56,22 @@ section:not(#home) {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px 8%;
+    padding: 100px 8% 20px;
 }
 
 section#app-preview {
-    padding: 100px 8% 64px;
+    display: block;
+    align-items: stretch;
+    padding: 0;
+}
+
+section#app-bests {
+    padding: 64px 8% 48px;
+}
+
+section#motivation {
+    padding: 64px 8%;
+    justify-content: center;
 }
 
 .section-divider {
@@ -115,10 +127,10 @@ section#app-preview {
     width: 40px;
     height: 40px;
     background-color: transparent;
-    border: 1px solid #1d1d1d;
+    border: 1px solid #0A3109;
     border-radius: 50%; /* círculo completo */
     text-decoration: none;
-    color: #1d1d1d;
+    color: #0A3109;
     font-size: 1.25rem;
     box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
 }
@@ -151,16 +163,16 @@ h2.section-title {
 }
 
 .social-media-buttons a {
-  color: #000;
+  color: #0A3109;
   margin-right: 4px;
   font-size: 1.5rem;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .social-media-buttons a:hover {
   transform: scale(1.1);
-  color: #d07f98;
-  border-color: #d07f98;
+  color: #56A572;
+  border-color: #56A572;
 }
 
 .footer-right h4 {
