@@ -5,9 +5,16 @@ footer, .footer-content {
 
 footer {
   position: relative;
+  width: 100%;
   color: #0A3109;
   background: linear-gradient(90deg, #e89cae, #f3c3d3);
   overflow: hidden;
+  display: block;
+}
+
+#site-footer {
+  width: 100%;
+  display: block;
 }
 
 #footer-wave {
@@ -118,16 +125,32 @@ footer {
 /* Copyright */
 #footer_copyright {
     position: relative;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 0.9rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 24px;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    padding: 1.5rem 3.5rem;
+    margin: 0;
+    font-size: 0.8rem;
     color: #555;
-    padding: 1.5rem;
     font-weight: 300;
+    text-align: left;
     z-index: 1;
     background: transparent;
+}
+
+#footer_copyright > span:first-child {
+  justify-self: start;
+  text-align: left;
+}
+
+#footer_copyright > span:last-child {
+  justify-self: end;
+  text-align: right;
+  white-space: nowrap;
 }
 
 #footer_copyright a {
@@ -166,6 +189,23 @@ footer {
     .footer-list {
         padding-left: 0;
         align-items: center;
+    }
+
+    #footer_copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 1.25rem 2rem;
+    }
+
+    #footer_copyright > span:first-child,
+    #footer_copyright > span:last-child {
+        justify-self: start;
+        text-align: left;
+        white-space: normal;
+        width: 100%;
     }
 }
 
