@@ -1,0 +1,130 @@
+#page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 40%, rgba(232, 156, 174, 0.22), transparent 70%),
+    #F8FFFB;
+  transition: opacity 0.45s ease, visibility 0.45s ease;
+}
+
+#page-loader.is-done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body.is-loading {
+  overflow: hidden;
+}
+
+.loader-bundle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spider-descend 1.7s cubic-bezier(0.22, 0.9, 0.3, 1) forwards;
+}
+
+.loader-figure {
+  position: relative;
+  width: min(180px, 46vw);
+  animation: spider-sway 1.7s ease-in-out forwards;
+}
+
+.loader-spider {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 18px rgba(10, 49, 9, 0.18));
+}
+
+/* Mesma cor/espessura do fio da logo (#0A3109) */
+.loader-thread {
+  position: absolute;
+  left: 50.6%;
+  top: -26vh;
+  z-index: 2;
+  width: max(1.5px, 0.63%);
+  height: calc(26vh + 41%);
+  border-radius: 0;
+  background-color: #0A3109;
+  box-shadow: none;
+  transform: translateX(-50%) scaleY(0.2);
+  transform-origin: top center;
+  animation: thread-unspool 1.7s cubic-bezier(0.22, 0.9, 0.3, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes spider-descend {
+  0% {
+    transform: translateY(-48vh);
+    opacity: 0.7;
+  }
+  70% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  85% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes thread-unspool {
+  0% {
+    transform: translateX(-50%) scaleY(0.2);
+  }
+  100% {
+    transform: translateX(-50%) scaleY(1);
+  }
+}
+
+@keyframes spider-sway {
+  0% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  70% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .loader-figure {
+    width: min(150px, 52vw);
+  }
+
+  .loader-thread {
+    top: -20vh;
+    height: calc(20vh + 41%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader-bundle,
+  .loader-figure,
+  .loader-thread {
+    animation: none;
+  }
+
+  .loader-bundle {
+    opacity: 1;
+    transform: none;
+  }
+
+  .loader-thread {
+    transform: translateX(-50%) scaleY(1);
+  }
+}

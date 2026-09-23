@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G2EHZ85ML2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-G2EHZ85ML2');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Solicitar exclusão da conta no aplicativo Arane Crochê.">
+    <link rel="canonical" href="https://arane.com.br/preview/excluir_conta/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+
+    <link rel="stylesheet" href="/preview/src/styles/styles.css">
+    <link rel="stylesheet" href="/preview/src/styles/privacidade.css">
+    <link rel="icon" type="image/png" href="/preview/src/assets/favicon-96x96.png" sizes="96x96" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Excluir conta | Arane Crochê</title>
+</head>
+
+<body>
+
+  <div id="site-header"></div>
+
+  <main id="content">
+      <div class="container">
+        <h1>Solicitar exclusão da conta</h1>
+        <div class="subtitle">
+          Você pode solicitar a exclusão permanente da sua conta e dos seus dados associados ao aplicativo.
+        </div>
+        <div class="subtitle">
+          Enviaremos um e-mail de confirmação para o endereço cadastrado, e após a confirmação, sua conta será excluída.
+        </div>
+
+        <!-- Onde o conteúdo vai entrar -->
+        <div id="document-content" class="document-content">
+          <form id="contact_form" method="POST" action="javascript:void(0);">
+            <div class="campo">
+              <label for="nome">Nome:</label>
+              <input type="text" name="nome" id="nome" required>
+            </div>
+
+            <div class="campo">
+              <label>E-mail:</label>
+              <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="campo">
+              <label>Motivo da exclusão:</label>
+              <textarea row="20" id="observacao" name="observacao" required></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+
+            <input type="hidden" name="pagina" id="pagina" value="excluir_conta">
+          </form>
+
+          <div id="status_message"></div>
+        </div>
+
+        <!-- Status -->
+        <div id="status" class="status"></div>
+      </div>
+
+      <div id="site-footer"></div>
+    </main>
+
+    <script src='/preview/src/javascript/header.js'></script>
+    <script src='/preview/src/javascript/footer.js'></script>
+    <script src='/preview/src/javascript/script.js'></script>
+    <script src='/preview/src/javascript/contato.js'></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+#app-preview {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+#app-preview .app-examples {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+
+#app-preview .app-examples-text {
+  position: absolute;
+  top: clamp(48px, 7vw, 96px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: min(48rem, 88%);
+  margin: 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.5;
+  color: #0A3109;
+  -webkit-text-stroke: 0;
+  text-shadow:
+    -0.3px -0.3px 0 #56A572,
+     0.3px -0.3px 0 #56A572,
+    -0.3px  0.3px 0 #56A572,
+     0.3px  0.3px 0 #56A572;
+}
+
+@media (max-width: 768px) {
+  #app-preview .app-examples-text {
+    top: 20px;
+    width: 92%;
+    font-size: 0.78rem;
+    line-height: 1.35;
+    padding: 0 12px;
+  }
+}

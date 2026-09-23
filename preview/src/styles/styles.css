@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+@import url('loading.css');
+@import url('header.css');
+@import url('home.css');
+@import url('bests.css');
+@import url('preview.css');
+@import url('features.css');
+@import url('answers.css');
+@import url('contact.css');
+@import url('modal.css');
+@import url('footer.css');
+
+* {
+    font-family: "Lexend Deca", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+html {
+  color-scheme: only light;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #F8FFFB;
+}
+
+main {
+  flex: 1;
+}
+
+section:not(#home) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 8% 48px;
+}
+
+section#app-preview {
+    display: block;
+    align-items: stretch;
+    padding: 0;
+}
+
+section#app-bests,
+section#features,
+section#answers,
+section#contact {
+    padding: 48px 8% 48px;
+    margin-top: 0;
+}
+
+section#motivation {
+    padding: 48px 8%;
+    justify-content: center;
+}
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 8%;
+  margin: 0;
+  background-color: #F8FFFB;
+}
+
+.section-divider::before {
+  content: "";
+  display: block;
+  width: min(220px, 45%);
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #56a572 25%,
+    #e89cae 50%,
+    #56a572 75%,
+    transparent 100%
+  );
+}
+
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.btn-default:hover {
+    background-color: #F8FFFB;
+}
+
+.social-media-buttons #icons-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    
+.social-media-buttons a {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #0A3109;
+    border-radius: 50%; /* círculo completo */
+    text-decoration: none;
+    color: #0A3109;
+    font-size: 1.25rem;
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
+}
+
+.social-media-buttons a:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+.section-title {
+    color: #0A3109;
+    font-weight: 900;
+    text-align: center;
+    border-bottom: 3px solid #56A572;
+    font-size: clamp(1.45rem, 4.5vw, 2.5rem);
+    line-height: 1.25;
+    max-width: 100%;
+    padding-inline: 8px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h1.section-title,
+h2.section-title {
+    font-size: clamp(1.45rem, 4.5vw, 2.5rem);
+}
+
+.social-media-buttons a {
+  color: #0A3109;
+  margin-right: 4px;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.social-media-buttons a:hover {
+  transform: scale(1.1);
+  color: #56A572;
+  border-color: #56A572;
+}
+
+.footer-right h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.footer-right p {
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-copy {
+  display: block;
+  text-align: right;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  h1.section-title,
+  h2.section-title,
+  .section-title {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    padding-inline: 12px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links a {
+    margin: 0 8px;
+  }
+
+  .social-media-buttons {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1.section-title,
+  h2.section-title,
+  .section-title {
+    font-size: 1.35rem;
+  }
+}
