@@ -207,6 +207,17 @@ section#motivation .motivate {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  section#motivation {
+    padding: 36px 5%;
+  }
+
+  section#motivation .motivate {
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+}
+
 #status_message_newsletter {
   display: none;
   width: 100%;
