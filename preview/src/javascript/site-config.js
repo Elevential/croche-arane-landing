@@ -1,20 +1,24 @@
 /* Configuração rápida do site — altere e faça deploy */
 (function () {
   var path = (window.location && window.location.pathname) || "";
-  var params = new URLSearchParams(window.location.search || "");
-  var isPreview =
-    /^\/preview(\/|$)/.test(path) || params.get("mode") === "preview";
+  var search = (window.location && window.location.search) || "";
+  var isPreview = false;
+
+  try {
+    var params = new URLSearchParams(search);
+    isPreview = params.get("mode") === "preview";
+  } catch (e) {
+    isPreview = /[?&]mode=preview(?:&|$)/.test(search);
+  }
+
+  if (!isPreview) {
+    isPreview = /\/preview(?:\/|$)/.test(path);
+  }
 
   window.ARANE_SITE_CONFIG = {
-    // true quando a URL é /preview/...
     isPreview: isPreview,
-
-    // Emergência: true = visitantes veem tela de manutenção
     maintenance: false,
-
-    // Use /?preview=SEU_CODIGO para ver o site mesmo em manutenção
     previewKey: "arane-review",
-
     maintenanceTitle: "Estamos em manutenção",
     maintenanceMessage:
       "O site da Arane Crochê está passando por uma atualização. Voltamos em breve.",

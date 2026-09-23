@@ -105,7 +105,7 @@ header:has(#navbar):has(#mobile_menu.active) .nav-item.active a {
   justify-content: center;
   flex-shrink: 0;
   padding: 8px 16px;
-  background-color: #0A3109;
+  background-color: #e89cae;
   color: #ffffff;
   font-size: 11px;
   font-weight: 700;
@@ -117,7 +117,7 @@ header:has(#navbar):has(#mobile_menu.active) .nav-item.active a {
 }
 
 .nav-studio-btn:hover {
-  background-color: #154016;
+  background-color: #d07f98;
   color: #ffffff;
   transform: translateY(-1px);
 }

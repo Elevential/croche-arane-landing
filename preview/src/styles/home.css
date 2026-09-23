@@ -49,8 +49,9 @@
 }
 
 #cta_buttons img {
-  max-width: 150px;
-  height: auto;
+  height: 42px;
+  width: auto;
+  max-width: none;
   cursor: pointer;
   border-radius: 12px;
   display: block;
@@ -240,7 +241,7 @@ section#motivation .motivate {
   }
 
   #cta_buttons img {
-    max-width: 130px;
+    height: 38px;
   }
 }
 
@@ -287,7 +288,7 @@ section#motivation .motivate {
   }
 
   #cta_buttons img {
-    max-width: 120px;
+    height: 36px;
   }
 
   .social-media-buttons {
