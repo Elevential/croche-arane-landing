@@ -146,6 +146,11 @@ html.is-preview .nav-studio-btn {
 
     #mobile_btn {
         display: block;
+        margin-left: auto;
+    }
+
+    html.is-preview #mobile_btn {
+        margin-left: 12px;
     }
 
     #mobile_menu.active {
@@ -173,7 +178,7 @@ html.is-preview .nav-studio-btn {
 
     body > header,
     header:has(#navbar) {
-        padding: 12px 4% 14px;
+        padding: 12px 12px 14px;
     }
 
     #navbar {
