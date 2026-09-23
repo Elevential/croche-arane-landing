@@ -57,13 +57,31 @@
 }
 
 #launch_date {
-  display: flex !important;
-  flex-direction: column !important;
+  display: none;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
   margin-top: 40px;
   text-align: center;
+}
+
+/* Produção (visitante): pré-lançamento */
+html.is-production #cta_buttons {
+  display: none;
+}
+
+html.is-production #launch_date {
+  display: flex;
+}
+
+/* Preview (revisão): stores + esconde pré-lançamento */
+html.is-preview #cta_buttons {
+  display: flex;
+}
+
+html.is-preview #launch_date {
+  display: none;
 }
 
 .launch_text {

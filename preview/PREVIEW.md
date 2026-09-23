@@ -40,8 +40,12 @@ git merge develop
 git push
 ```
 
-## Observações
+## Produção vs revisão
 
-- `/preview` é gerado pela Action; não edite essa pasta na mão na `main`.
-- O `robots.txt` do preview bloqueia indexação da área de revisão.
-- O modo manutenção (`site-config.js`) é só para emergência, não para revisão.
+| URL | Visitante vê |
+|-----|----------------|
+| `https://arane.com.br/` | botão de pré-lançamento; **sem** Studio Arane |
+| `https://arane.com.br/preview/` | botões Google/Apple; **com** Studio Arane |
+
+O mesmo código detecta `/preview` automaticamente (`site-config.js`).
+

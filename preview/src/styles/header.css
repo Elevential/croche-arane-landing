@@ -122,6 +122,11 @@ header:has(#navbar):has(#mobile_menu.active) .nav-item.active a {
   transform: translateY(-1px);
 }
 
+/* Studio Arane só na revisão (/preview) */
+html.is-production .nav-studio-btn {
+  display: none;
+}
+
 /* Logo maior só no web e com navbar transparente */
 @media screen and (min-width: 1101px) {
   header:has(#navbar):not(.scrolled) #nav_logo img {
