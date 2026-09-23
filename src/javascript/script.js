@@ -87,22 +87,30 @@ $(document).ready(function () {
     const navItems = $("#nav_list .nav-item");
     if (!sections.length || !navItems.length) return;
 
-    $(window).off("scroll.araneSpy").on("scroll.araneSpy", function () {
-      const currentScroll = $(this).scrollTop();
+    function updateActive() {
+      const currentScroll = $(window).scrollTop();
+      let activeId = "home";
 
       sections.each(function () {
+        const id = $(this).attr("id");
+        if (!id) return;
+
         const sectionTop = $(this).offset().top - 80;
         const sectionBottom = sectionTop + $(this).outerHeight();
 
         if (currentScroll >= sectionTop && currentScroll < sectionBottom) {
-          const id = $(this).attr("id");
-          navItems.removeClass("active");
-          $("#nav_list .nav-item a[href='#" + id + "'], #nav_list .nav-item a[href='/#" + id + "']")
-            .parent()
-            .addClass("active");
+          activeId = id;
         }
       });
-    });
+
+      navItems.removeClass("active");
+      $("#nav_list .nav-item a[href='#" + activeId + "'], #nav_list .nav-item a[href='/#" + activeId + "']")
+        .parent()
+        .addClass("active");
+    }
+
+    $(window).off("scroll.araneSpy").on("scroll.araneSpy", updateActive);
+    updateActive();
   }
 
   function initNav() {

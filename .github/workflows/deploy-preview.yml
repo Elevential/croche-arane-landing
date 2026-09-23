@@ -1,0 +1,91 @@
+name: Deploy Preview
+
+on:
+  push:
+    branches:
+      - develop
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-preview
+  cancel-in-progress: true
+
+jobs:
+  publish-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout develop
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+          path: develop
+
+      - name: Prepare /preview site
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/preview-site
+          rsync -a \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude 'preview' \
+            --exclude 'node_modules' \
+            --exclude '.cursor' \
+            develop/ /tmp/preview-site/
+
+          # Reescreve caminhos absolutos para viver sob /preview/
+          mapfile -d '' files < <(find /tmp/preview-site -type f \( \
+            -name '*.html' -o -name '*.js' -o -name '*.css' -o -name '*.xml' -o -name '*.txt' \
+          \) -print0)
+
+          for file in "${files[@]}"; do
+            sed -i \
+              -e 's|https://arane.com.br/src/|https://arane.com.br/preview/src/|g' \
+              -e 's|https://arane.com.br/atualizacoes/|https://arane.com.br/preview/atualizacoes/|g' \
+              -e 's|https://arane.com.br/politica_privacidade/|https://arane.com.br/preview/politica_privacidade/|g' \
+              -e 's|https://arane.com.br/politica-privacidade/|https://arane.com.br/preview/politica-privacidade/|g' \
+              -e 's|https://arane.com.br/excluir_conta/|https://arane.com.br/preview/excluir_conta/|g' \
+              -e 's|https://arane.com.br/"|https://arane.com.br/preview/"|g' \
+              -e 's|https://arane.com.br/'"'"'|https://arane.com.br/preview/'"'"'|g' \
+              -e 's|https://arane.com.br/#|https://arane.com.br/preview/#|g' \
+              -e 's|href="/#|href="/preview/#|g' \
+              -e 's|href="/atualizacoes/|href="/preview/atualizacoes/|g' \
+              -e 's|href="/politica_privacidade/|href="/preview/politica_privacidade/|g' \
+              -e 's|href="/politica-privacidade/|href="/preview/politica-privacidade/|g' \
+              -e 's|href="/excluir_conta/|href="/preview/excluir_conta/|g' \
+              -e 's|href="/"|href="/preview/"|g' \
+              -e 's|src="/src/|src="/preview/src/|g' \
+              -e 's|fetch("/src/|fetch("/preview/src/|g' \
+              -e 's|"/src/|"/preview/src/|g' \
+              -e "s|'/src/|'/preview/src/|g" \
+              "$file"
+          done
+
+          # robots no preview: não indexar a área de revisão
+          printf '%s\n' 'User-agent: *' 'Disallow: /' > /tmp/preview-site/robots.txt
+          touch /tmp/preview-site/.nojekyll
+
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+
+      - name: Publish preview folder on main
+        run: |
+          set -euo pipefail
+          rm -rf main/preview
+          mkdir -p main/preview
+          cp -a /tmp/preview-site/. main/preview/
+          cd main
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A preview
+          if git diff --staged --quiet; then
+            echo "Nenhuma mudança no /preview"
+            exit 0
+          fi
+          git commit -m "chore: atualiza /preview a partir de develop"
+          git push origin HEAD:main
