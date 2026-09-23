@@ -40,7 +40,7 @@
 }
 
 #cta_buttons {
-  display: flex;
+  display: none;
   gap: 24px;
   justify-content: center;
   align-items: center;
@@ -57,7 +57,7 @@
 }
 
 #launch_date {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -66,16 +66,7 @@
   text-align: center;
 }
 
-/* Produção (visitante): pré-lançamento */
-html.is-production #cta_buttons {
-  display: none;
-}
-
-html.is-production #launch_date {
-  display: flex;
-}
-
-/* Preview (revisão): stores + esconde pré-lançamento */
+/* Preview (revisão): stores no lugar do pré-lançamento */
 html.is-preview #cta_buttons {
   display: flex;
 }
