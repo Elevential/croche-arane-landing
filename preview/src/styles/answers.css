@@ -93,6 +93,23 @@
     font-size: 14px;
 }
 
+.accordion-body a {
+    color: #0A3109;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.accordion-body ul,
+.accordion-body ol {
+    margin: 0.5em 0;
+    padding-left: 1.4em;
+    font-size: 14px;
+}
+
+.accordion-body li {
+    margin: 0.25em 0;
+}
+
 .accordion-body.active {
     height: 100%;
     max-height: 1000px;

@@ -28,6 +28,15 @@
   border: 1px solid rgba(10, 49, 9, 0.08);
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(10, 49, 9, 0.06);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.best-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(10, 49, 9, 0.1);
 }
 
 .best-item img {
