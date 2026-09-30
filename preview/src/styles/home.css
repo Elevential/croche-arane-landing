@@ -11,7 +11,7 @@
   padding-top: 72px;
   padding-bottom: 0;
   background-color: #f8fffb;
-  background-image: url("../assets/la_crochet.png");
+  background-image: url("../assets/la_crochet.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -163,6 +163,7 @@ html.is-preview #launch_date {
 
 #banner img {
   width: 100%;
+  height: auto;
   max-height: none;
   object-fit: contain;
   display: block;
