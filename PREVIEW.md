@@ -40,12 +40,12 @@ git merge develop
 git push
 ```
 
-## Produção vs revisão
+## Local (Live Server)
 
-| URL | Visitante vê |
-|-----|----------------|
-| `https://arane.com.br/` | botão de pré-lançamento; **sem** Studio Arane |
-| `https://arane.com.br/preview/` | botões Google/Apple; **com** Studio Arane |
+Use um destes:
 
-O mesmo código detecta `/preview` automaticamente (`site-config.js`).
+- `http://127.0.0.1:5501/?mode=preview`
+- `http://127.0.0.1:5501/preview/` (atalho que redireciona)
+
+Só `http://127.0.0.1:5501/preview` sem a pasta local dava 404 — o `/preview` de produção é gerado pelo Action na `main`, não é a pasta do projeto na `develop`.
 

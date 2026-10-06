@@ -1,5 +1,6 @@
 (function () {
   const API_URL = "https://api.arane.com.br/api/estampas/trending/";
+  const APP_URL = "https://app.arane.com.br";
   const MAX_ITEMS = 8;
 
   function escapeHtml(text) {
@@ -35,7 +36,11 @@
 
         const name = username ? "@" + username : "Arane Crochê";
         return (
-          '<article class="best-item">' +
+          '<a class="best-item" href="' +
+          APP_URL +
+          '" target="_blank" rel="noopener noreferrer" aria-label="Abrir Arane Crochê — estampa de ' +
+          escapeHtml(name) +
+          '">' +
           '<img src="' +
           escapeHtml(imageUrl) +
           '" alt="Estampa de ' +
@@ -44,7 +49,7 @@
           '<p class="best-username">' +
           escapeHtml(name) +
           "</p>" +
-          "</article>"
+          "</a>"
         );
       })
       .filter(Boolean)

@@ -11,7 +11,7 @@
   padding-top: 72px;
   padding-bottom: 0;
   background-color: #f8fffb;
-  background-image: url("../assets/la_crochet.png");
+  background-image: url("../assets/la_crochet.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@
   align-items: center;
   padding: 40px;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
 }
 
 #cta .title {
@@ -49,8 +49,9 @@
 }
 
 #cta_buttons img {
-  max-width: 150px;
-  height: auto;
+  height: 42px;
+  width: auto;
+  max-width: none;
   cursor: pointer;
   border-radius: 12px;
   display: block;
@@ -162,6 +163,7 @@ html.is-preview #launch_date {
 
 #banner img {
   width: 100%;
+  height: auto;
   max-height: none;
   object-fit: contain;
   display: block;
@@ -206,6 +208,17 @@ section#motivation .motivate {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  section#motivation {
+    padding: 36px 5%;
+  }
+
+  section#motivation .motivate {
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+}
+
 #status_message_newsletter {
   display: none;
   width: 100%;
@@ -240,7 +253,7 @@ section#motivation .motivate {
   }
 
   #cta_buttons img {
-    max-width: 130px;
+    height: 38px;
   }
 }
 
@@ -287,7 +300,7 @@ section#motivation .motivate {
   }
 
   #cta_buttons img {
-    max-width: 120px;
+    height: 36px;
   }
 
   .social-media-buttons {
