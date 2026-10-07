@@ -1,19 +1,7 @@
 /* Configuração rápida do site — altere e faça deploy */
 (function () {
-  var path = (window.location && window.location.pathname) || "";
-  var search = (window.location && window.location.search) || "";
-  var isPreview = false;
-
-  try {
-    var params = new URLSearchParams(search);
-    isPreview = params.get("mode") === "preview";
-  } catch (e) {
-    isPreview = /[?&]mode=preview(?:&|$)/.test(search);
-  }
-
-  if (!isPreview) {
-    isPreview = /\/preview(?:\/|$)/.test(path);
-  }
+  // Produção = experiência completa (antes só em /preview)
+  var isPreview = true;
 
   window.ARANE_SITE_CONFIG = {
     isPreview: isPreview,
@@ -25,6 +13,6 @@
   };
 
   var root = document.documentElement;
-  root.classList.toggle("is-preview", isPreview);
-  root.classList.toggle("is-production", !isPreview);
+  root.classList.add("is-preview");
+  root.classList.remove("is-production");
 })();
