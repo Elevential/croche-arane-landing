@@ -1,10 +1,8 @@
 # Preview / revisão
 
-Visitantes veem a produção em:
+Produção (`https://arane.com.br/`) já mostra stores + Studio Arane (o que antes era só revisão).
 
-- https://arane.com.br/
-
-A revisão fica em:
+A pasta `/preview/` continua como espelho automático da `develop` para testes:
 
 - https://arane.com.br/preview/
 

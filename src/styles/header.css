@@ -100,7 +100,7 @@ header:has(#navbar):has(#mobile_menu.active) .nav-item.active a {
 }
 
 .nav-studio-btn {
-  display: none;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
@@ -122,11 +122,6 @@ header:has(#navbar):has(#mobile_menu.active) .nav-item.active a {
   transform: translateY(-1px);
 }
 
-/* Studio Arane só na revisão (/preview) */
-html.is-preview .nav-studio-btn {
-  display: inline-flex;
-}
-
 /* Logo maior só no web e com navbar transparente */
 @media screen and (min-width: 1101px) {
   header:has(#navbar):not(.scrolled) #nav_logo img {
@@ -140,16 +135,12 @@ html.is-preview .nav-studio-btn {
         display: none;
     }
 
-    html.is-preview .nav-studio-btn {
+    .nav-studio-btn {
         margin-left: auto;
     }
 
     #mobile_btn {
         display: block;
-        margin-left: auto;
-    }
-
-    html.is-preview #mobile_btn {
         margin-left: 12px;
     }
 
