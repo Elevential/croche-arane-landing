@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     try {
       const response = await fetch(
-        "https://api.arane.com.br/api/perguntas-frequentes?origem=contato",
+        "https://api.arane.com.br/api/perguntas-frequentes?visivel_em=landing_page",
       );
 
       if (!response.ok) {
